@@ -1,0 +1,502 @@
+/* Gaya umum */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling untuk Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 1; /* Pastikan navbar di depan konten lainnya */
+}
+
+.navbar-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-color-picker {
+    margin-top: 10px;
+}
+
+/* Tombol Burger */
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+/* Gaya untuk color picker di dalam navbar */
+.navbar-color-picker {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-color-picker label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.navbar-color-picker input[type="color"] {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Dropdown Menu */
+.menu-dropdown {
+    display: flex;
+    flex-direction: column; /* Menjadikan item dropdown vertikal */
+    align-items: flex-start;
+    background-color: #444;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 5px;
+    z-index: 999; /* Memastikan dropdown di depan elemen lainnya */
+}
+
+.menu-dropdown a {
+    display: block; /* Menampilkan link secara block agar ke bawah */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%; /* Link akan mengambil seluruh lebar container */
+}
+
+.menu-dropdown a:hover {
+    background-color: #555;
+}
+
+
+/* Gaya dasar untuk section about */
+#about {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background-color: #444; /* Background default */
+}
+
+.text-3d h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-3d b {
+    font-size: 18px;
+}
+
+/* Bagian Profil Anggota */
+.profile-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profil Card */
+.profile-card {
+    background-color: #2d3748;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 4px solid;
+}
+
+.profile-card:nth-child(1) img {
+    border-color: #38a169;
+}
+
+.profile-card:nth-child(2) img {
+    border-color: #5162fc;
+}
+
+.profile-card:nth-child(3) img {
+    border-color: #d42020;
+}
+
+.profile-card:nth-child(4) img {
+    border-color: #ffd700;
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+    color: #fff;
+}
+
+/* Profile Quote */
+.profile-quote {
+    background-color: #48bb78;
+    padding: 12px 16px;
+    color: white;
+    position: absolute;
+    bottom: -64px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: bottom 0.3s ease;
+}
+
+.profile-quotes {
+    background-color: #da6619;
+    padding: 12px 16px;
+    color: white;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: bottom 0.3s ease;
+}
+
+.profile-quote:hover {
+    bottom: 0;
+}
+
+.profile-quotes:hover {
+    bottom: 0;
+}
+
+.profile-card:nth-child(1) .profile-quotes {
+    background-color: #2f855a;
+}
+.profile-card:nth-child(2) .profile-quotes {
+    background-color: #5162fc;
+}
+
+.profile-card:nth-child(3) .profile-quote {
+    background-color: #d42020;
+}
+
+.profile-card:nth-child(4) .profile-quotes {
+    background-color: #ffd700;
+}
+
+/* Galeri Foto Anggota Kelompok */
+#galeri-carousel {
+    padding: 64px 0;
+    background: linear-gradient(to right, #1a202c, #2d3748);
+    color: white;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#carousel {
+    display: flex;
+    justify-content: space-around;
+    animation: slide 30s linear infinite; /* Animasi lebih lambat dengan durasi 30 detik */
+}
+
+.carousel-item {
+    min-width: 250px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-item p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Animasi carousel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Kontainer kontak */
+#contact {
+    padding: 64px 0;
+    background: #2D3748;
+    color: white;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.contact-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.contact-members div {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    padding: 8px 12px;
+    font-size: 24px;
+    margin: 0 10px;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.whatsapp {
+    background-color: #38a169;
+}
+
+.whatsapp:hover {
+    background-color: #2f855a;
+}
+
+.instagram {
+    background-color: #e53e3e;
+}
+
+.instagram:hover {
+    background-color: #c53030;
+}
+
+/* Menambahkan font Poppins dan Dancing Script */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: white;
+}
+
+.contact-members h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.contact-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.social-links a {
+    padding: 8px 12px;
+    font-size: 24px;
+    margin: 0 10px;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.whatsapp {
+    background-color: #38a169;
+}
+
+.whatsapp:hover {
+    background-color: #2f855a;
+}
+
+.instagram {
+    background-color: #e53e3e;
+}
+
+.instagram:hover {
+    background-color: #c53030;
+}
+
+.footer {
+    background-color: #111827;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.info-section p {
+    font-size: 1.125rem;
+    color: #9CA3AF;
+    margin-bottom: 32px;
+}
+
+.sponsor-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Memungkinkan elemen untuk membungkus ke baris berikutnya */
+}
+
+.channel {
+    text-align: center;
+    margin: 10px; /* Menambahkan margin untuk memberi jarak antar channel */
+    transition: transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.channel img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.channel p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.highlight-channel {
+    position: relative; /* Untuk positioning border */
+    padding: 10px; /* Menambah padding untuk efek border */
+    border: 2px solid gold; /* Border berwarna gold */
+    border-radius: 8px; /* Membuat sudut border lebih halus */
+    box-shadow: 0 0 10px gold; /* Efek cahaya */
+}
+
+.highlight-channel:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 0 20px gold; /* Meningkatkan efek cahaya saat hover */
+}
+
+.copyright {
+    border-top: 1px solid #4B5563;
+    padding-top: 16px;
+}
+
+.copyright p {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+

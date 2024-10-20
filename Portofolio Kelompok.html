@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Portofolio X Tkj 1</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav>
+    <!-- Logo dan Nama Kelompok -->
+    <div class="navbar-title">
+        <div class="navbar-subtitle">X TKJ 1</div>
+        Website Portofolio Kelompok
+
+        <!-- Color Picker di dalam navbar -->
+        <div class="navbar-color-picker">
+            <label for="navbar-background-color">Ganti Warna Background:</label>
+            <input type="color" id="navbar-background-color" value="#333">
+        </div>
+    </div>
+
+    <!-- Tombol Burger -->
+    <div id="burger" class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu Dropdown -->
+    <div id="menu" class="menu-dropdown" style="display:none;">
+        <a href="#about">About Us</a>
+        <a href="#gallery">Galeri Portofolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Minimal JavaScript untuk mengubah background navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('nav');
+        const colorPicker = document.getElementById('navbar-background-color');
+
+        colorPicker.addEventListener('input', function() {
+            navbar.style.backgroundColor = colorPicker.value;
+        });
+
+        // Burger menu functionality
+        const menu = document.getElementById('menu');
+        const burger = document.getElementById('burger');
+
+        burger.addEventListener('click', function() {
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            burger.classList.toggle('open');
+        });
+
+        // Menutup menu ketika mengklik di luar menu
+        window.addEventListener('click', function(event) {
+            if (!burger.contains(event.target) && !menu.contains(event.target)) {
+                menu.style.display = 'none';
+                burger.classList.remove('open');
+            }
+        });
+    });
+</script>
+
+    
+
+   <!-- PEMBUKA -->
+    <section id="about">
+        <!-- Color Picker Container -->
+        <div class="color-picker-container">
+            <label for="gradient-start-color">Warna Awal Background:</label>
+            <input type="color" id="gradient-start-color" value="#ff0000">
+
+            <label for="gradient-end-color">Warna Akhir Background:</label>
+            <input type="color" id="gradient-end-color" value="#0000ff">
+        </div>
+
+        <!-- Background Animasi -->
+        <div class="background-animation"></div>
+        
+        <!-- Container Konten -->
+        <div class="content-container">
+            <!-- Teks 3D yang Menonjol -->
+            <div class="text-3d">
+                <h2>Kelompok 6 TKJ 1</h2>
+                <b>Bersama, kami ciptakan inovasi dan kreativitas tanpa batas, mengejutkan dunia dengan karya kami.</b>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Minimal JavaScript untuk mengontrol gradien warna -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const gradientStartColorPicker = document.getElementById('gradient-start-color');
+        const gradientEndColorPicker = document.getElementById('gradient-end-color');
+        const aboutSection = document.getElementById('about'); // Mengambil elemen section about
+
+        // Fungsi untuk mengubah gradien pada background section
+        function updateGradientBackground() {
+            const startColor = gradientStartColorPicker.value;
+            const endColor = gradientEndColorPicker.value;
+            aboutSection.style.background = `linear-gradient(to right, ${startColor}, ${endColor})`;
+        }
+
+        // Event listener untuk setiap kali pengguna memilih warna
+        gradientStartColorPicker.addEventListener('input', updateGradientBackground);
+        gradientEndColorPicker.addEventListener('input', updateGradientBackground);
+    });
+    </script>
+
+
+  <!-- Header Bagian About Us -->
+<header style="text-align: center; padding: 40px 0; background-color: #1f2937; color: white; font-family: 'Poppins', sans-serif;">
+    <h1 style="font-size: 48px; font-weight: bold; letter-spacing: 2px; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);">About Us</h1>
+    <p style="font-size: 20px; margin-top: 8px; color: #cbd5e0;">Profil anggota kelompok kami dan moto hidup mereka</p>
+</header>
+
+    <!-- Bagian Profil Anggota -->
+    <section class="profile-section">
+        
+        <!-- Profil Anggota 1 -->
+        <div class="profile-card">
+            <img src="img/chd2shc2.jpeg" alt="Anggota 1">
+            <h2>Chindy Aulia N.A</h2>
+            <div class="profile-quotes">
+                Kata-kata: <b>Alwalyse Me Number ONE</b>
+            </div>
+        </div>
+        
+        <!-- Profil Anggota 2 -->
+        <div class="profile-card">
+            <img src="img/Amira.PNG" alt="Anggota 2">
+            <h2>Amira Puja H</h2>
+            <div class="profile-quotes">
+                Kata-kata: <b>Apapun dirimu, Jadilah yang baik</b>
+            </div>
+        </div>
+        
+        <!-- Profil Anggota 3 -->
+        <div class="profile-card">
+            <img src="img/aaaa.jpeg" alt="Anggota 3">
+            <h2>Luluk Iswatul Izzah</h2>
+            <div class="profile-quote">
+                Kata-kata:<b>Ingat, hari ini adalah hari esok yang kamu khawatirkan kemarin </b>
+            </div>
+        </div>
+
+        <!-- Profil Anggota 4 -->
+        <div class="profile-card">
+            <img src="img/WhatsApp Image 2024-10-02 at 18.02.00.jpeg" alt="Anggota 4">
+            <h2>M.Raikhan Akmal</h2>
+            <div class="profile-quotes">
+                Kata-kata: <b>Setelah Kesulitan Pasti ada kemudahan</b>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!--Galeri foto-->
+
+<section id="galeri-carousel">
+    <div class="carousel-container">
+        <h1>Galeri Foto Anggota Kelompok</h1>
+        <div id="carousel">
+            <!-- Foto Anggota 1 -->
+            <div class="carousel-item">
+                <img src="foto-anggota1.jpg" alt="Anggota 1">
+                <p>Nama Anggota 1</p>
+            </div>
+            <!-- Foto Anggota 2 -->
+            <div class="carousel-item">
+                <img src="foto-anggota2.jpg" alt="Anggota 2">
+                <p>Nama Anggota 2</p>
+            </div>
+            <!-- Foto Anggota 3 -->
+            <div class="carousel-item">
+                <img src="foto-anggota3.jpg" alt="Anggota 3">
+                <p>Nama Anggota 3</p>
+            </div>
+            <!-- Foto Anggota 4 -->
+            <div class="carousel-item">
+                <img src="foto-anggota4.jpg" alt="Anggota 4">
+                <p>Nama Anggota 4</p>
+            </div>
+            <!-- Foto Anggota 5 -->
+            <div class="carousel-item">
+                <img src="foto-anggota5.jpg" alt="Anggota 5">
+                <p>Nama Anggota 5</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Link ke file eksternal CSS dan JavaScript -->
+
+<script src="Node.js"></script>
+
+<section id="contact">
+    <div class="contact-container">
+        <h1>Kontak Anggota</h1>
+        
+        <div class="contact-members">
+            <!-- Anggota 1 -->
+            <div>
+                <h2>Akmal</h2>
+                <div class="social-links">
+                    <a href="https://wa.me/6289522178775" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/username1/" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Anggota 2 -->
+            <div>
+                <h2>Chindy</h2>
+                <div class="social-links">
+                    <a href="https://wa.me/62882005618565" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/username2/" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Anggota 3 -->
+            <div>
+                <h2>Amira</h2>
+                <div class="social-links">
+                    <a href="https://wa.me/6285642630236" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/username3/" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Anggota 4 -->
+            <div>
+                <h2>Luluk</h2>
+                <div class="social-links">
+                    <a href="https://wa.me/6289522178775" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/username4/" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <!-- Bagian Atas: Informasi Umum -->
+        <div class="info-section">
+            <h2>Terima Kasih Telah Mengunjungi Website Kami</h2>
+            <p>Website portofolio ini dikembangkan dengan bantuan dari lima channel YouTube untuk mengatur CSS yang luar biasa, proses ini dilakukan dengan meminimalkan bantuan AI untuk menghindari kemungkinan banyak kesalahan.</p>
+        </div>
+
+        <!-- Bagian Tengah: Sponsor -->
+        <div class="sponsor-section">
+            <div class="channel">
+                <img src="img/support 3.jpg" alt="Channel 3">
+                <p>Kelas Komputer Online</p>
+            </div>
+            <div class="channel">
+                <img src="img/support 2.jpg" alt="Channel 2">
+                <p>Web Programming UNPAS</p>
+            </div>
+            <div class="channel highlight-channel"> <!-- Tambahkan class ini -->
+                <img src="img/support 1.jpg" alt="Channel 1">
+                <p>Dea Afrizal</p>
+            </div>
+            <div class="channel">
+                <img src="img/support 4.jpg" alt="Channel 4">
+                <p>Creative Academy Indonesia</p>
+            </div>
+            <div class="channel">
+                <img src="img/support5.jpg" alt="Channel 5">
+                <p>Codehal Channel</p>
+            </div>
+        </div>
+
+        <!-- Bagian Bawah: Hak Cipta -->
+        <div class="copyright">
+            <p>&copy; 2024 Website Kelompok Kami. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
